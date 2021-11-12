@@ -1,0 +1,30 @@
+package com.testproject.steps;
+
+import com.testproject.pages.GoogleSearchPage;
+import com.testproject.utils.Driver;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.Keys;
+
+public class GoogleSearchSteps {
+
+    private GoogleSearchPage page;
+
+    @Given("^I am on Google search page$")
+    public void i_am_on_google_search_page() {
+        Driver.get().get("https://google.com");
+    }
+
+    @When("^I search for \"([^\"]*)\"$")
+    public void i_search_for(String search) {
+        page = new GoogleSearchPage();
+        page.searchBar.sendKeys(search + Keys.ENTER);
+    }
+
+    @Then("I see title contains {string}")
+    public void i_see_title_contains(String string) {
+        Assert.assertTrue(Driver.get().getTitle().contains(string));
+    }
+}
