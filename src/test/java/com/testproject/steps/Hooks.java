@@ -20,7 +20,7 @@ public class Hooks {
     @Before
     public void setUp(Scenario scenario) {
         LOG.info("Setting up browser");
-        Driver.get().get(Environment.URL);
+//        Driver.get().get(Environment.URL);
         LOG.info("Executing scenario: " + scenario.getName());
     }
 

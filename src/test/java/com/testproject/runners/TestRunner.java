@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt",
                 "pretty"},
         features = "src/test/resources/features",
-        glue = "com/cision/blackwing/steps",
-        dryRun = true
+        glue = "com/testproject/steps",
+        dryRun = false
 )
 
 public class TestRunner {
