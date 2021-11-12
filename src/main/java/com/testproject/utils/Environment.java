@@ -24,7 +24,7 @@ public class Environment {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        
+
         URL = properties.getProperty("url");
         DB_URL = properties.getProperty("db_url");
         DB_USERNAME = properties.getProperty("db_username");
