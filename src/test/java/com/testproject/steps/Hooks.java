@@ -35,7 +35,6 @@ public class Hooks {
                 LOG.info("Failed scenario: " + scenario.getName());
             }
         }
-        LOG.info("Closing browser");
         Driver.closeDriver();
     }
 
