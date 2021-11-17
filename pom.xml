@@ -32,17 +32,18 @@
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
-                <version>5.4.0</version>
+                <version>5.0.0</version>
                 <executions>
                     <execution>
                         <id>execution</id>
-                        <phase>verify</phase>
+                        <phase>test</phase>
                         <goals>
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>CucumberReports</projectName>
+                            <projectName>CucumberWithActions</projectName>
                             <outputDirectory>${project.build.directory}}/cucumber-report-html</outputDirectory>
+                            <cucumberOutput>${project.build.directory}/cucumber-reports/CucumberReport.json</cucumberOutput>
                             <inputDirectory>${project.build.directory}}</inputDirectory>
                             <jsonFiles>
                                 <param>**/cucumber.json</param>
