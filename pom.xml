@@ -42,7 +42,7 @@
                         </goals>
                         <configuration>
                             <projectName>CucumberReports</projectName>
-                            <outputDirectory>${project.build.directory}}</outputDirectory>
+                            <outputDirectory>${project.build.directory}}/cucumber-report-html</outputDirectory>
                             <inputDirectory>${project.build.directory}}</inputDirectory>
                             <jsonFiles>
                                 <param>**/cucumber.json</param>
