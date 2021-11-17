@@ -42,11 +42,13 @@
                         </goals>
                         <configuration>
                             <projectName>CucumberWithActions</projectName>
-                            <outputDirectory>${project.build.directory}}/cucumber-report-html</outputDirectory>
-                            <cucumberOutput>${project.build.directory}/cucumber-reports/CucumberReport.json</cucumberOutput>
-                            <inputDirectory>${project.build.directory}}</inputDirectory>
+                            <outputDirectory>${project.build.directory}/generated-report-netmaster</outputDirectory>
+                            <cucumberOutput>${project.build.directory}/cucumber-reports/CucumberTestReport.json</cucumberOutput>
+                            <inputDirectory>${project.build.directory}/cucumber-reports/</inputDirectory>
                             <jsonFiles>
-                                <param>**/cucumber.json</param>
+                                <param>
+                                    CucumberTestReport.json
+                                </param>
                             </jsonFiles>
                         </configuration>
                     </execution>
