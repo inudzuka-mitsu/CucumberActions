@@ -42,8 +42,8 @@
                         </goals>
                         <configuration>
                             <projectName>CucumberWithActions</projectName>
-                            <outputDirectory>${project.build.directory}/generated-report-netmaster</outputDirectory>
-                            <cucumberOutput>${project.build.directory}/cucumber-reports/CucumberTestReport.json</cucumberOutput>
+                            <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
+                            <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
 <!--                            <inputDirectory>${project.build.directory}</inputDirectory>-->
                             <jsonFiles>
                                 <param>
