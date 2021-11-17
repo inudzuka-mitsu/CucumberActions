@@ -44,10 +44,10 @@
                             <projectName>CucumberWithActions</projectName>
                             <outputDirectory>${project.build.directory}/cucumber-report-html</outputDirectory>
                             <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
-<!--                            <inputDirectory>${project.build.directory}</inputDirectory>-->
+                            <inputDirectory>${project.build.directory}</inputDirectory>
                             <jsonFiles>
                                 <param>
-                                    CucumberTestReport.json
+                                    **/*.json
                                 </param>
                             </jsonFiles>
                         </configuration>
