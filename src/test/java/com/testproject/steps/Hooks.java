@@ -33,11 +33,10 @@ public class Hooks {
             } catch (Exception e) {
                 e.printStackTrace();
                 LOG.info("Failed scenario: " + scenario.getName());
-            } finally {
-                LOG.info("Closing browser");
-                Driver.closeDriver();
             }
         }
+        LOG.info("Closing browser");
+        Driver.closeDriver();
     }
 
     @Before("@db")
