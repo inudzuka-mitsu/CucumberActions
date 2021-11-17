@@ -41,7 +41,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>Cucumber HTML Reports</projectName>
+                            <projectName>CucumberReports</projectName>
                             <outputDirectory>${project.build.directory}}</outputDirectory>
                             <inputDirectory>${project.build.directory}}</inputDirectory>
                             <jsonFiles>

@@ -2,6 +2,7 @@ package com.testproject.steps;
 
 import com.testproject.pages.GoogleSearchPage;
 import com.testproject.utils.Driver;
+import com.testproject.utils.Environment;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,7 +15,7 @@ public class GoogleSearchSteps {
 
     @Given("^I am on Google search page$")
     public void i_am_on_google_search_page() {
-        Driver.get().get("https://google.com");
+        Driver.get().get(Environment.URL);
     }
 
     @When("^I search for \"([^\"]*)\"$")
