@@ -16,7 +16,7 @@ public class Environment {
         String env = System.getProperty("environment") != null ? System.getProperty("environment") : ConfigurationReader.getProperty("environment");
 
         try {
-            String path = System.getProperty("user.dir") + "src/test/resources/Environments/" + env + ".properties";
+            String path = System.getProperty("user.dir") + "/src/test/resources/Environments/" + env + ".properties";
             FileInputStream input = new FileInputStream(path);
             properties = new Properties();
             properties.load(input);
@@ -25,6 +25,7 @@ public class Environment {
             e.printStackTrace();
         }
 
+        assert properties != null;
         URL = properties.getProperty("url");
         DB_URL = properties.getProperty("db_url");
         DB_USERNAME = properties.getProperty("db_username");
