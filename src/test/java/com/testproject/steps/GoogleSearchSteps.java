@@ -1,5 +1,6 @@
 package com.testproject.steps;
 
+import com.testproject.cucumber.ScenarioContext;
 import com.testproject.pages.GoogleSearchPage;
 import com.testproject.utils.Driver;
 import com.testproject.utils.Environment;
@@ -11,7 +12,13 @@ import org.openqa.selenium.Keys;
 
 public class GoogleSearchSteps {
 
-    private GoogleSearchPage page;
+    private final GoogleSearchPage page;
+    private final ScenarioContext context;
+
+    public GoogleSearchSteps(ScenarioContext context, GoogleSearchPage page) {
+        this.context = context;
+        this.page = page;
+    }
 
     @Given("^I am on Google search page$")
     public void i_am_on_google_search_page() {
@@ -20,7 +27,6 @@ public class GoogleSearchSteps {
 
     @When("^I search for \"([^\"]*)\"$")
     public void i_search_for(String search) {
-        page = new GoogleSearchPage();
         page.searchBar.sendKeys(search + Keys.ENTER);
     }
 

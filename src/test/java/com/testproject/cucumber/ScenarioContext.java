@@ -1,13 +1,12 @@
 package com.testproject.cucumber;
 
-import java.sql.DriverManager;
 import java.util.HashMap;
 import java.util.Map;
 
 public class ScenarioContext {
 
     public Map<String, Object> scenarioContext = new HashMap<>();
-    public DriverManager driverManager;
+
 
     public void setAttribute(String key, Object value) {
         if (isContains(key)) {
